@@ -1,0 +1,40 @@
+# Generic home assistant SCRIPT to send a notification
+
+alias: Rest notification test
+sequence:
+  - service: notify.tvoverlaysample
+    data:
+      data:
+        id: "notification_sample" # optional id string - if a notification is being displayed and the tvoverlay receives a notification with the same id, the notification displayed is updated instantly
+        appTitle: AppTitle # optional text field
+        appIcon: mdi:unicorn  # optional - accepts mdi icons, image urls and Bitmap encoded to Base64
+        color: "#FFF000" # optional - accepts 6 or 8 digit color hex. the '#' is optional
+        smallIcon: mdi:speaker-multiple # optional - accepts mdi icons, image urls and Bitmap encoded to Base64
+        largeIcon: mdi:camera # optional - accepts mdi icons, image urls and Bitmap encoded to Base64
+        corner: bottom_end  # optional - values: bottom_start, bottom_end, top_start, top_end
+        seconds: 7  # optional - exibition duration
+      message: This is my message to you! # REQUIRED: this is a required field for home assistant, but it can be 'null' if not needed
+      title: Here is a Title  # optional text field
+mode: single
+
+# Use case 1: Notify on person arriving Home
+
+alias: Person online notification
+trigger:
+  - platform: state
+    entity_id:
+      - person.person1
+      - person.person2
+    to: home
+    from: not_home
+condition: []
+action:
+  - service: notify.tvoverlaysuite
+    data:
+      data:
+        smallIcon: mdi:home
+        color: "#008000"
+        largeIcon: [home_assistant_url]{{ trigger.from_state.attributes.entity_picture }}
+      message: >-
+        {{ trigger.from_state.attributes.friendly_name }} is Home
+mode: single
