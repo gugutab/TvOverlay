@@ -17,7 +17,7 @@ sequence:
       title: Here is a Title  # optional text field
 mode: single
 
-# Use case 1: Notify on person arriving Home
+# Use case 1: Notify on person arriving Home (AUTOMATION)
 
 alias: Person online notification
 trigger:
