@@ -1,3 +1,5 @@
+# on configuration.yaml
+
 notify:
   - name: TvOverlayNotify
     platform: rest
