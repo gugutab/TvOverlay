@@ -1,3 +1,4 @@
+notify:
   - name: TvOverlayNotify
     platform: rest
     method: POST_JSON
