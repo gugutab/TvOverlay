@@ -1,0 +1,34 @@
+  - name: TvOverlayNotify
+    platform: rest
+    method: POST_JSON
+    resource: http://[ip]:[port]/notify 
+    verify_ssl: false
+    title_param_name: title
+    data:
+      id: "{{ data.id | default(null) }}"
+      appTitle: "{{ data.appTitle  | default('Home Assistant') }}"
+      appIcon: "{{ data.appIcon | default('mdi:home-assistant') }}"
+      color: "{{ data.color | default('#049cdb') }}"
+      image: "{{ data.image | default(null) }}"
+      smallIcon: "{{ data.smallIcon | default(null) }}"
+      largeIcon: "{{ data.largeIcon | default(null) }}"
+      corner: "{{ data.corner  | default(null) }}"
+      seconds: "{{ data.seconds | default(null) }}"
+      
+  - name: TvOverlayNotifyFixed
+    platform: rest
+    method: POST_JSON
+    resource: http://[ip]:[port]/notify_fixed
+    verify_ssl: false
+    title_param_name: title
+    data:
+      id: "{{ data.id | default(null) }}"
+      text: "{{ data.text  | default(null) }}"
+      icon: "{{ data.icon | default(null) }}"
+      textColor: "{{ data.textColor | default(null) }}"
+      iconColor: "{{ data.iconColor | default(null) }}"
+      borderColor: "{{ data.borderColor | default(null) }}"
+      backgroundColor: "{{ data.backgroundColor | default(null) }}"
+      shape: "{{ data.shape | default(null) }}"
+      visible: "{{ data.visible | default(true) }}"
+      expiration: "{{ data.expiration | default(null) }}"
