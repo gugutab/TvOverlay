@@ -1,0 +1,7 @@
+alias: Sample Rest API
+sequence:
+  - service: rest_command.tvoverlay
+    data:
+      payload: >-
+        {hotCorner: "bottom_start", overlayVisibility: "25", clockOverlayVisibility: "25"}
+mode: single
