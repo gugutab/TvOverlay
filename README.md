@@ -11,7 +11,8 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a>
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#how-to-use">Issues, suggestions & feature requests</a>
 </p>
 
 ![screenshot](https://github.com/gugutab/TvOverlay/blob/main/images/Screenshot_20230920_142821.png?raw=true)
@@ -60,3 +61,6 @@ Save time and effort with preset configurations. TvOverlay comes with two preset
 2. (optional) Import Postman Collection
 	- For better understanding of the Rest API, you can import Postman a collection of samples in the [Postman section](https://github.com/gugutab/TvOverlay/blob/main/home_assistant/configuration_sample.yaml)
 	- Be sure to modify the Variables to the correct host and port.
+
+## Issues, suggestions & feature requests
+For Issues, suggestions & feature requests, [create a Issue](https://github.com/gugutab/TvOverlay/issues).
