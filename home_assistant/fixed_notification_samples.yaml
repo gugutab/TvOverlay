@@ -1,0 +1,36 @@
+# Generic home assistant SCRIPT to send a fixed notification
+
+alias: Rest fixed notification test
+sequence:
+  - service: notify.tvoverlaysamplefixed
+    data:
+      data:
+        id: "fixed_notification_sample" # optional id string - if a fixed notification with this id exist, it will be updated
+        icon: mdi:unicorn  # optional - accepts mdi icons, image urls and Bitmap encoded to Base64
+        textColor: "#FFF000" # optional - accepts 6 or 8 digit color hex. the '#' is optional
+        iconColor: "#FFF000" # optional - accepts 6 or 8 digit color hex. the '#' is optional
+        borderColor: "#FFF000" # optional - accepts 6 or 8 digit color hex. the '#' is optional
+        backgroundColor: "#FFF000" # optional - accepts 6 or 8 digit color hex. the '#' is optional
+        shape: "circle" # optional - values: circle, rounded, rectangular
+        expiration: "7m"  # optional - valid formats: 1695693410 (Epoch time), 1y2w3d4h5m6s (duration format) or 123 (for seconds)
+        visible: true  # optional - if false it deletes the fixed notification with matching id
+      message: "Sample" # REQUIRED: this is a required field for home assistant, but it can be 'null' if not needed
+mode: single
+
+# Use Case 1: Phone Battery mirror
+
+alias: Phone battery Fixed Notification
+trigger:
+  - platform: state
+    entity_id:
+      - sensor.phone_battery_level # using home assistant android app battery sensor
+condition: []
+action:
+  - service: notify.tvoverlaysamplefixed
+    data:
+      message: "{{ states.sensor.phone_battery_level.state }}%"
+      data:
+        id: "phone_battery"
+        expiration: "15m" #optinal, but this avoids showing outdated info if phone cannot comunicate for some reason, as leaving wifi
+        icon: "{{ state_attr('sensor.phone_battery_level', 'icon') }}"
+mode: single
