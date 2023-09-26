@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "9012481d-b13d-4bcb-a77d-0883a5a1d554",
+		"name": "TvOverlay Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6036715"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{ip}}/get",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Overlay",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{ip}}/get/overlay",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"get",
+						"overlay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Mqtt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{ip}}/get/mqtt",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"get",
+						"mqtt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get fixed notifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{ip}}/get/fixed_notifications",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"get",
+						"fixed_notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mqtt\": {\r\n        \"displayMqttStatusChange\": true,\r\n        \"mqttConfig\": {\r\n            \"broker\": \"192.168.0.101\",\r\n            \"password\": \"mqtt\",\r\n            \"port\": 1883,\r\n            \"user\": \"mqtt\"\r\n        }\r\n    },\r\n    \"notifications\": {\r\n        \"displayNotifications\": true,\r\n        \"displayFixedNotifications\": true,\r\n        \"notificationLayoutName\": \"Default\",\r\n        \"notificationDuration\": 5,\r\n        \"fixedNotificationsVisibility\": -1\r\n    },\r\n    \"overlay\": {\r\n        \"clockOverlayVisibility\": 20,\r\n        \"hotCorner\": \"top_start\",\r\n        \"overlayVisibility\": 20\r\n    },\r\n    \"settings\": {\r\n        \"deviceName\": \"Shield TV\",\r\n        \"displayDebug\": false,\r\n        \"remotePort\": 5001\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/set",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"set"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Overlay",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clockOverlayVisibility\": 0,\r\n    \"hotCorner\": \"top_end\",\r\n    \"overlayVisibility\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/set/overlay",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"set",
+						"overlay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set MQTT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"displayMqttStatusChange\": true,\r\n    \"mqttConfig\": {\r\n        \"broker\": \"192.168.0.101\",\r\n        \"password\": \"mqtt\",\r\n        \"port\": 1883,\r\n        \"user\": \"mqtt\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/set/mqtt",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"set",
+						"mqtt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set display notifications",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"displayNotifications\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/set/notifications",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"set",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set display notifications layout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"notificationLayoutName\": \"Minimalist\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/set/notifications",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"set",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Screen on",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clockOverlayVisibility\": 70,\r\n    \"hotCorner\": \"top_end\",\r\n    \"overlayVisibility\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/set/screen_on",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"set",
+						"screen_on"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Restart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/set/restart_service",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"set",
+						"restart_service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete mqtt",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/delete/mqtt",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"delete",
+						"mqtt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Message\",\r\n    \"title\": \"Title\",\r\n    \"id\": 0,\r\n    \"appTitle\": \"AppTitle\",\r\n    \"appIcon\": \"mdi:unicorn\",\r\n    \"color\": \"#FF0000\",\r\n    \"image\": \"https://picsum.photos/200/100\",\r\n    \"smallIcon\": \"mdi:speaker-multiple\",\r\n    \"largeIcon\": \"mdi:camera\",\r\n    \"corner\": \"bottom_end\",\r\n    \"seconds\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/notify",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"notify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notify fixed Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"icon\": \"https://picsum.photos/300/300\",\r\n    \"text\": \"Teste\",\r\n    \"id\": \"fixed_notification_sample\"\r\n    // \"expiration\": 1693627419\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/notify_fixed",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"notify_fixed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notify fixed remove",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"visible\": false,\r\n    \"id\": \"fixed_notification_sample\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{ip}}/notify_fixed",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{ip}}",
+					"path": [
+						"notify_fixed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.0.100:5001",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"100"
+					],
+					"port": "5001"
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "192.168.0.107"
+		},
+		{
+			"key": "ip",
+			"value": "5001"
+		}
+	]
+}
