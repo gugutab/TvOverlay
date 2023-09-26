@@ -35,3 +35,14 @@ notify:
       shape: "{{ data.shape | default(null) }}"
       visible: "{{ data.visible | default(true) }}"
       expiration: "{{ data.expiration | default(null) }}"
+
+      
+rest_command:
+  tvoverlay:
+    url: http://[ip]:[port]/set/overlay
+    method: POST
+    verify_ssl: false
+    headers:
+      accept: 'application/json'
+    content_type:  'application/json; charset=utf-8'
+    payload: '{{ payload }}'
