@@ -26,18 +26,24 @@ Manage TvOverlay effortlessly using its companion app, TvOverlay Remote. Alterna
 </p>
 
 2. **Notifications:**  
-Receive notifications from multiple sources, including your Android phone (with TvOverlay Remote app), REST API, and Home Assistant. TVOverlay offers three default notification layouts – Default, Minimalist, and Icon Only – to suit your preferences. Premium users can even design their own notification layouts for a truly tailored experience.  
+Receive notifications from multiple sources, including your Android phone (with TvOverlay Remote app), REST API, and Home Assistant. TVOverlay offers three default notification layouts – Default, Minimalist, and Icon Only – to suit your preferences. Premium users can even design their own notification layouts for a truly tailored experience.
+<p align="center">
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/not1.gif?raw=true" />
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/not2.gif?raw=true" />
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/not3.gif?raw=true" />
+<br><em>Sample notifications for Default, Minimalist and Icon Only layouts</em>
+</p>
   
-3. **Clock:**  
+4. **Clock:**  
 Stay on schedule with our clock feature, and as a premium user, personalize it to match your style. Choose from a variety of colors and text options to make it uniquely yours.  
   
-4. **Fixed Notifications:**  
+5. **Fixed Notifications:**  
 Keep important information at a glance with fixed notifications. These compact alerts remain visible in the corner of your TV screen for a specified time or until you dismiss them.  
   
-5. **Overlay Background:**  
+6. **Overlay Background:**  
 Control the ambiance with our background layer, which sits between overlay content and your TV content. Could be used to artifically change the TV brightness without dealing with menus. Premium users enjoy additional customization options.  
   
-6. **Presets for Efficiency:**  
+7. **Presets for Efficiency:**  
 Save time and effort with preset configurations. TvOverlay comes with two presets, and premium users can create and save their own. Apply multiple settings at once to streamline your experience.  
   
 
