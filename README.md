@@ -20,7 +20,11 @@
 ## Key Features
 1. **Control:**  
 Manage TvOverlay effortlessly using its companion app, TvOverlay Remote. Alternatively, control it via Rest API or MQTT, making it compatible with Home Assistant and your smart home ecosystem.  
-  
+<p align="center">
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/control.gif?raw=true" />
+<br><em>TvOverlay being controlled by TvOverlay remote (left) and Home Assistant via MQTT (Right)</em>
+</p>
+
 2. **Notifications:**  
 Receive notifications from multiple sources, including your Android phone (with TvOverlay Remote app), REST API, and Home Assistant. TVOverlay offers three default notification layouts – Default, Minimalist, and Icon Only – to suit your preferences. Premium users can even design their own notification layouts for a truly tailored experience.  
   
