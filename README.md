@@ -36,7 +36,11 @@ Receive notifications from multiple sources, including your Android phone (with 
   
 4. **Clock:**  
 Stay on schedule with our clock feature, and as a premium user, personalize it to match your style. Choose from a variety of colors and text options to make it uniquely yours.  
-  
+<p align="center">
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/clock.jpg?raw=true" />
+<br><em>Defaul clock being displayed at the corner of the screen</em>
+</p>
+
 5. **Fixed Notifications:**  
 Keep important information at a glance with fixed notifications. These compact alerts remain visible in the corner of your TV screen for a specified time or until you dismiss them.  
   
