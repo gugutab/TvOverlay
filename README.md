@@ -42,12 +42,20 @@ Stay on schedule with our clock feature, and as a premium user, personalize it t
 </p>
 
 5. **Fixed Notifications:**  
-Keep important information at a glance with fixed notifications. These compact alerts remain visible in the corner of your TV screen for a specified time or until you dismiss them.  
+Keep important information at a glance with fixed notifications. These compact alerts remain visible in the corner of your TV screen for a specified time or until you dismiss them.
+<p align="center">
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/fixed.jpg?raw=true" />
+<br><em>Fixed notification examples for: Phone battery ; Light On; Twitch channel online</em>
+</p>
   
-6. **Overlay Background:**  
-Control the ambiance with our background layer, which sits between overlay content and your TV content. Could be used to artifically change the TV brightness without dealing with menus. Premium users enjoy additional customization options.  
+7. **Overlay Background:**  
+Control the ambiance with our background layer, which sits between overlay content and your TV content. Could be used to artifically change the TV brightness without dealing with menus. Premium users enjoy additional customization options.
+<p align="center">
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/background.gif?raw=true" />
+<br><em>Example of background visibility going to 50%, then 95% and back to 0%</em>
+</p>
   
-7. **Presets for Efficiency:**  
+8. **Presets for Efficiency:**  
 Save time and effort with preset configurations. TvOverlay comes with two presets, and premium users can create and save their own. Apply multiple settings at once to streamline your experience.  
   
 
