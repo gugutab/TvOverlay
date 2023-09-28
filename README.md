@@ -12,7 +12,9 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#how-to-use">Issues, suggestions & feature requests</a>
+  <a href="#premium-features">Premium Features</a> •
+  <a href="#use-cases">Use cases</a> •
+  <a href="#issues-suggestions--feature-requests">Issues, suggestions & feature requests</a>
 </p>
 
 ![screenshot](https://github.com/gugutab/TvOverlay/blob/main/images/Screenshot_20230920_142821.png?raw=true)
@@ -22,7 +24,7 @@
 Stay on schedule with our clock feature, and as a premium user, personalize it to match your style. Choose from a variety of colors and text options to make it uniquely yours.  
 <p align="center">
   <img src="https://github.com/gugutab/TvOverlay/blob/main/images/clock.jpg?raw=true" />
-<br><em>Defaul clock being displayed at the corner of the screen</em>
+<br><em>Default clock being displayed at the corner of the screen</em>
 </p>
 
 2. **Notifications:**  
@@ -55,31 +57,39 @@ Manage TvOverlay effortlessly using its companion app, TvOverlay Remote. Alterna
 <br><em>TvOverlay being controlled by TvOverlay remote (left) and Home Assistant via MQTT (Right)</em>
 </p>
   
-
+## Premium Features
+On TvOverlay Remote, users can have access to Premium features by purchasing a one-time In-app product. This purchase unlocks:
+* **Multiple devices:** be able to control multiple TvOverlay devices on the same remote app
+* **Customization:** personalize Notifications, Clock & Background. Change colors, font styles and more
+* **Presets:** create new presets to apply multiple settings at once
+* Helps the developer to continue working on this project :)
 
 ## How To Use
 
- 1. Install TvOverlay on your AndroidTv via [PlayStore](https://play.google.com/store/apps/details?id=com.tabdeveloper.tvoverlay)
+1. Install TvOverlay on your AndroidTv via [PlayStore](https://play.google.com/store/apps/details?id=com.tabdeveloper.tvoverlay)
 
 2. Run TvOverlay and finish all setup steps: 
 	- Overlay permission: //TODO description
 	- Battery optmization: //TODO description
 	
-2. (optional) Install TvOverlay Remote on an android device via [PlayStore](https://play.google.com/store/apps/details?id=com.tabdeveloper.tvoverlayremote)
+3. (optional) Install TvOverlay Remote on an android device via [PlayStore](https://play.google.com/store/apps/details?id=com.tabdeveloper.tvoverlayremote)
 	- Make sure that you both devices are on the same network and connect it by scanning the QR code on TvOverlay main screen, or connect mannualy by input its host and IP.
 	- (Optional) On *Notification*, you can give permission to mirror your device notifications to TvOverlay.
 	
-2. (optional) Connect to MQTT server
+4. (optional) Connect to MQTT server
 	- If you have a MQTT server running, you can connect your TvOverlay device to it to control its main functions. On the TvOverlay or TvOverlay Remote app, find the MQTT option and fill your server information.
 	- On TvOverlay app MQTT settings you can enable *Display status on change* to better debug if you have problems.
 	- If you are using MQTT on Home Assistant, a new device will be created on connection. By default, it will be named *TvOverlay - [Device Model]*
 	
-2. (optional) Connect to Home Assistant
+5. (optional) Connect to Home Assistant
 	- Follow the samples on the [Home Assistant section](https://github.com/gugutab/TvOverlay/blob/main/home_assistant/configuration_sample.yaml) to be able to send Notifications, Fixed Notifications and manage all the settings.
 
-2. (optional) Import Postman Collection
+6. (optional) Import Postman Collection
 	- For better understanding of the Rest API, you can import Postman a collection of samples in the [Postman section](https://github.com/gugutab/TvOverlay/blob/main/home_assistant/configuration_sample.yaml)
 	- Be sure to modify the Variables to the correct host and port.
+
+## Use cases
+//TODO
 
 ## Issues, suggestions & feature requests
 For Issues, suggestions & feature requests, [create a Issue](https://github.com/gugutab/TvOverlay/issues).
