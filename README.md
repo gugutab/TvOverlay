@@ -17,12 +17,12 @@
 
 ![screenshot](https://github.com/gugutab/TvOverlay/blob/main/images/Screenshot_20230920_142821.png?raw=true)
 
-## Key Features
-1. **Control:**  
-Manage TvOverlay effortlessly using its companion app, TvOverlay Remote. Alternatively, control it via Rest API or MQTT, making it compatible with Home Assistant and your smart home ecosystem.  
+  ## Key Features
+1. **Clock:**  
+Stay on schedule with our clock feature, and as a premium user, personalize it to match your style. Choose from a variety of colors and text options to make it uniquely yours.  
 <p align="center">
-  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/control.gif?raw=true" />
-<br><em>TvOverlay being controlled by TvOverlay remote (left) and Home Assistant via MQTT (Right)</em>
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/clock.jpg?raw=true" />
+<br><em>Defaul clock being displayed at the corner of the screen</em>
 </p>
 
 2. **Notifications:**  
@@ -34,29 +34,26 @@ Receive notifications from multiple sources, including your Android phone (with 
 <br><em>Sample notifications for Default, Minimalist and Icon Only layouts</em>
 </p>
   
-4. **Clock:**  
-Stay on schedule with our clock feature, and as a premium user, personalize it to match your style. Choose from a variety of colors and text options to make it uniquely yours.  
-<p align="center">
-  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/clock.jpg?raw=true" />
-<br><em>Defaul clock being displayed at the corner of the screen</em>
-</p>
-
-5. **Fixed Notifications:**  
+3. **Fixed Notifications:**  
 Keep important information at a glance with fixed notifications. These compact alerts remain visible in the corner of your TV screen for a specified time or until you dismiss them.
 <p align="center">
   <img src="https://github.com/gugutab/TvOverlay/blob/main/images/fixed.jpg?raw=true" />
 <br><em>Fixed notification examples for: Phone battery ; Light On; Twitch channel online</em>
 </p>
   
-7. **Overlay Background:**  
+4. **Overlay Background:**  
 Control the ambiance with our background layer, which sits between overlay content and your TV content. Could be used to artifically change the TV brightness without dealing with menus. Premium users enjoy additional customization options.
 <p align="center">
   <img src="https://github.com/gugutab/TvOverlay/blob/main/images/background.gif?raw=true" />
 <br><em>Example of background visibility going to 50%, then 95% and back to 0%</em>
 </p>
-  
-8. **Presets for Efficiency:**  
-Save time and effort with preset configurations. TvOverlay comes with two presets, and premium users can create and save their own. Apply multiple settings at once to streamline your experience.  
+
+5. **Control everywhere & Presets for Efficiency:**  
+Manage TvOverlay effortlessly using its companion app, TvOverlay Remote. Alternatively, control it via Rest API or MQTT, making it compatible with Home Assistant and your smart home ecosystem. Save time and effort with Presets, to apply multiple settings at once and streamline your experience.   
+<p align="center">
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/control.gif?raw=true" />
+<br><em>TvOverlay being controlled by TvOverlay remote (left) and Home Assistant via MQTT (Right)</em>
+</p>
   
 
 
