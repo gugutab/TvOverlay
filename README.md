@@ -64,6 +64,12 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 * **Customization:** personalize Notifications, Clock & Background. Change colors, font styles and more
 * **Presets:** create new presets to apply multiple settings at once
 * Helps the developer to continue working on this project :)
+<p align="center">
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/customization1.jpg?raw=true" width="200" />
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/customization2.jpg?raw=true" width="200" />
+  <img src="https://github.com/gugutab/TvOverlay/blob/main/images/customization3.jpg?raw=true" width="200" />
+	<br><em>Clock & background customization (Left) and Notification customization (middle and right)</em>
+</p>
 
 ## How To Use
 
