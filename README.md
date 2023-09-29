@@ -2,8 +2,10 @@
 <p align="center">
 <img src="https://github.com/gugutab/TvOverlay/blob/main/images/tvOverlayIcon_banner.jpg?raw=true" alt="TvOverlay" width="600">
 <br>
-<img src="https://github.com/gugutab/TvOverlay/blob/main/images/playstore.png?raw=true" width="300" />
-<img src="https://github.com/gugutab/TvOverlay/blob/main/images/playstore_remote.png?raw=true" width="300" />	
+<a href="https://play.google.com/store/apps/details?id=com.tabdeveloper.tvoverlay">
+<img src="https://github.com/gugutab/TvOverlay/blob/main/images/playstore.png?raw=true" width="300" /></a>
+<a href="https://play.google.com/store/apps/details?id=com.tabdeveloper.tvoverlayremote">
+<img src="https://github.com/gugutab/TvOverlay/blob/main/images/playstore_remote.png?raw=true" width="300" /></a>	
 </p>
 
 <h4 align="center">Elevate your Android TV experience with TVOverlay – the ultimate app that turns your TV into an information hub like never before. Whether you're a casual viewer or a tech enthusiast, TVOverlay enhances your TV content by overlaying essential information and giving you complete control over its appearance.</h4>
