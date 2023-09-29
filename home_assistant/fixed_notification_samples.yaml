@@ -119,5 +119,5 @@ action:
           mdi:weather-lightning-rainy  {% endif %}
         expiration: 12h
         shape: circle
-      message: "{{ state_attr('weather.home', 'temperature') }}°"
+      message: "{{ state_attr('weather.home', 'temperature')  | round }}°"
 mode: single
