@@ -85,3 +85,39 @@ action:
             false
           {% endif %}
 mode: single
+
+# Use Case 4: Display indicator for weather
+
+alias: Weather indicator
+trigger:
+  - platform: state
+    entity_id:
+      - weather.home
+condition: []
+action:
+  - service: notify.tvoverlaysamplefixed
+    data:
+      data:
+        id: fixed_weather
+        icon: >-
+          {% if is_state("weather.home","clear-day") %} mdi:weather-sunny   {%
+          elif is_state("weather.homeweather.home","clear-night") %}
+          mdi:weather-night  {% elif is_state("weather.home","rain") %}
+          mdi:weather-rainy  {% elif is_state("weather.home","snow") %}
+          mdi:weather-snowy  {% elif is_state("weather.home","fog") %}
+          mdi:weather-fog  {% elif is_state("weather.home","sleet") %}
+          mdi:weather-partly-snowy-rainy  {% elif
+          is_state("weather.home","wind") %} mdi:weather-windy  {% elif
+          is_state("weather.home","cloudy") %} mdi:weather-cloudy  {% elif
+          is_state("weather.home","partly-cloudy-day") %}
+          mdi:weather-partly-cloudy {% elif
+          is_state("weather.home","partly-cloudy-night") %}
+          mdi:weather-night-partly-cloudy  {% elif
+          is_state("weather.home","hail") %} mdi:weather-hail  {% elif
+          is_state("weather.home","lightning") %} mdi:weather-lightning  {% elif
+          is_state("weather.home","thunderstorm") %}
+          mdi:weather-lightning-rainy  {% endif %}
+        expiration: 12h
+        shape: circle
+      message: "{{ state_attr('weather.home', 'temperature') }}°"
+mode: single
