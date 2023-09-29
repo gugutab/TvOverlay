@@ -13,6 +13,7 @@ sequence:
         largeIcon: mdi:camera # optional - accepts mdi icons, image urls and Bitmap encoded to Base64
         corner: bottom_end  # optional - values: bottom_start, bottom_end, top_start, top_end
         seconds: 7  # optional - exibition duration
+        image: "https://fastly.picsum.photos/id/778/300/300.jpg"  # optional - accepts mdi image urls
       message: This is my message to you! # REQUIRED: this is a required field for home assistant, but it can be 'null' if not needed
       title: Here is a Title  # optional text field
 mode: single
@@ -34,7 +35,7 @@ action:
       data:
         smallIcon: mdi:home
         color: "#008000"
-        largeIcon: [home_assistant_external_url]{{ trigger.from_state.attributes.entity_picture }}
+        largeIcon: [home_assistant_external_url]{{ trigger.from_state.attributes.entity_picture }} # home_assistant_external_url is my https url for my home assistant. 
       message: >-
         {{ trigger.from_state.attributes.friendly_name }} is Home
 mode: single
