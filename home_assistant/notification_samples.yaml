@@ -34,7 +34,34 @@ action:
       data:
         smallIcon: mdi:home
         color: "#008000"
-        largeIcon: [home_assistant_url]{{ trigger.from_state.attributes.entity_picture }}
+        largeIcon: [home_assistant_external_url]{{ trigger.from_state.attributes.entity_picture }}
       message: >-
         {{ trigger.from_state.attributes.friendly_name }} is Home
+mode: single
+
+# Use case 2: Notify with image, when a motion is detect in a camera
+
+alias: Motion notification
+trigger:
+  - type: motion # For the trigger, I selected my camera device on the UI, and it had an option for 'Motion started detecting motion'
+    platform: device
+    device_id: [device_id]
+    entity_id: [device_id]
+    domain: binary_sensor
+condition: []
+action:
+  - service: notify.tvoverlaysuite
+    data:
+      message: Motion detect at Front door!
+      data:
+        image: >-
+          [home_assistant_external_url]{{ state_attr('camera.[CAMERA]',
+          'entity_picture')+'&time='}}{{as_timestamp(now())}} 
+          # home_assistant_external_url is my https url for my home assistant. 
+          # entity_picture is a parial url to the camera still image, like '/api/camera_proxy/camera.[CAMERA}?token=XXX'.
+          # I added a timestamp simply to avoid the image being cached.
+        color: "#B00020"
+        largeIcon: mdi:motion-sensor
+        smallIcon: mdi:camera
+        seconds: 10
 mode: single
