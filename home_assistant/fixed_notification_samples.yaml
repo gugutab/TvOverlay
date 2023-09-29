@@ -34,3 +34,54 @@ action:
         expiration: "15m" #optinal, but this avoids showing outdated info if phone cannot comunicate for some reason, as leaving wifi
         icon: "{{ state_attr('sensor.phone_battery_level', 'icon') }}"
 mode: single
+
+# Use Case 2: Display indicator when a light is on:
+
+alias: Light on indicator
+trigger:
+  - platform: state
+    entity_id:
+      - group.[all_lights] # thats a group with all home lights
+condition: []
+action:
+  - service: notify.tvoverlaysamplefixed
+    data:
+      message: "null"
+      data:
+        id: "light_indicator"
+        icon: mdi:lightbulb
+        iconColor: "#ff9800"
+        borderColor: "#ff9800"
+        shape: circle
+        visible: |-
+          {% if 'on' in trigger.to_state.state %}
+            true
+          {% else %}
+            false
+          {% endif %}
+mode: single
+
+# Use Case 3: Display indicator when a channel is online on Twitch
+
+alias: Twitch channel indicator
+trigger:
+  - platform: state
+    entity_id:
+      - sensor.[twitch_streamer] # to create this sensor I used https://www.home-assistant.io/integrations/twitch/
+    id: "true"
+condition: []
+action:
+  - service: notify.tvoverlaysamplefixed
+    data:
+      message: "null"
+      data:
+        id: "twitch_indicator"
+        icon: >-
+          https://static-cdn.jtvnw.net/jtv_user_pictures/b840f303-1c0b-461b-9a7b-6557b56d03c8-profile_image-70x70.png # url for twitch avatar
+        visible: |-
+          {% if is_state('sensor.[twitch_streamer]', 'streaming')%}
+            true
+          {% else %}
+            false
+          {% endif %}
+mode: single
