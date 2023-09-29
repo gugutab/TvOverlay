@@ -1,6 +1,6 @@
   
 <p align="center">
-<picture><img src="https://github.com/gugutab/TvOverlay/blob/main/images/tvOverlayIcon_banner.jpg?raw=true" alt="TvOverlay" width="600"></picture>
+<picture><img src="https://github.com/gugutab/TvOverlay/blob/main/images/readme_main.png?raw=true" alt="TvOverlay" width="600"></picture>
 <br>
 <a href="https://play.google.com/store/apps/details?id=com.tabdeveloper.tvoverlay">
 <img src="https://github.com/gugutab/TvOverlay/blob/main/images/playstore.png?raw=true" width="300" /></a>
