@@ -1,0 +1,31 @@
+# Use Case 1: Darker screen after sunset; reseting if a sunrising
+
+alias: Sample sunset overlay
+trigger:
+  - platform: sun
+    event: sunset
+    offset: 0
+    id: sunrise
+  - platform: sun
+    event: sunrise
+    offset: 0
+    id: sunset
+condition: []
+action:
+  - if:
+      - condition: trigger
+        id:
+          - sunset
+    then:
+      - device_id: [device_id]
+        domain: number
+        entity_id: [entity_id]
+        type: set_value
+        value: 50
+    else:
+      - device_id: [device_id]
+        domain: number
+        entity_id: [entity_id]
+        type: set_value
+        value: 0
+mode: single
