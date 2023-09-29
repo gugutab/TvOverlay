@@ -10,6 +10,8 @@
 
 <span><p align="center">Elevate your Android TV experience with TVOverlay – the ultimate app that turns your TV into an information hub like never before. Whether you're a casual viewer or a tech enthusiast, TVOverlay enhances your TV content by overlaying essential information and giving you complete control over its appearance.</p></span>
 
+![screenshot](https://github.com/gugutab/TvOverlay/blob/main/images/Screenshot_20230920_142821.png?raw=true)
+
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
@@ -17,8 +19,6 @@
   <a href="#use-cases">Use cases</a> •
   <a href="#issues-suggestions--feature-requests">Issues, suggestions & feature requests</a>
 </p>
-
-![screenshot](https://github.com/gugutab/TvOverlay/blob/main/images/Screenshot_20230920_142821.png?raw=true)
 
   ## Key Features
 1. **Clock:**  
