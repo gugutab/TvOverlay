@@ -10,8 +10,13 @@
 
 <span><p align="center">Elevate your Android TV experience with TVOverlay – the ultimate app that turns your TV into an information hub like never before. Whether you're a casual viewer or a tech enthusiast, TVOverlay enhances your TV content by overlaying essential information and giving you complete control over its appearance.</p></span>
 
-![screenshot](https://github.com/gugutab/TvOverlay/blob/main/images/Screenshot_20230920_142821.png?raw=true)
-
+<p align="center">
+<a href="https://www.youtube.com/watch?v=mdsY084-pr8">
+<img src="https://github.com/gugutab/TvOverlay/blob/main/images/youtube_gif.gif?raw=true" /></a>
+</p>
+<p align="center">
+Watch it on YouTube: https://www.youtube.com/watch?v=mdsY084-pr8
+</p>
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
