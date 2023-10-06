@@ -106,7 +106,7 @@ action:
           {% elif is_state("weather.home", "hail") %} mdi:weather-hail
           {% elif is_state("weather.home", "lightning") %} mdi:weather-lightning
           {% elif is_state("weather.home", "lightning-rainy") %} mdi:weather-lightning-rainy
-          {% elif is_state("weather.home", "partly-cloudy") %} mdi:weather-partly-cloudy
+          {% elif is_state("weather.home", "partlycloudy") %} mdi:weather-partly-cloudy
           {% elif is_state("weather.home", "pouring") %} mdi:weather-pouring
           {% elif is_state("weather.home", "rainy") %} mdi:weather-rainy
           {% elif is_state("weather.home", "snowy") %} mdi:weather-snowy
