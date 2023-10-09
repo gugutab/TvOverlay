@@ -81,9 +81,16 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 1. Install TvOverlay on your AndroidTv via [PlayStore](https://play.google.com/store/apps/details?id=com.tabdeveloper.tvoverlay)
 
 2. Run TvOverlay and finish all setup steps: 
-	- Overlay permission: //TODO description
-	- Battery optmization: //TODO description
-	
+	- Draw over other apps permission: 
+ 		Permission required to create an overlay. Depending on the Android version and manufacturer this option may not be available on a system setting menu. In this case, you will have to enable it via ADB command. After [enabling ADB on your AndroidTV](https://www.youtube.com/watch?v=qcpl8SzWzb8), you can send the command using TvOverlay Remote or any other app or computer software that sends ADB commands. The ADB command is:
+   
+   	    *adb shell appops set com.tabdeveloper.tvoverlay SYSTEM_ALERT_WINDOW allow*
+
+	- Battery optmization:
+		This step is optional, but recommended to avoid the app being killed by the system. If you cannot access the system option to disable battery optimizationn, you may have to enable it via ADB command. After [enabling ADB on your AndroidTV](https://www.youtube.com/watch?v=qcpl8SzWzb8), you can send the command using TvOverlay Remote or any other app or computer software that sends ADB commands. The ADB command is:
+
+	    *adb shell dumpsys deviceidle whitelist +com.tabdeveloper.tvoverlay*
+   
 3. (optional) Install TvOverlay Remote on an android device via [PlayStore](https://play.google.com/store/apps/details?id=com.tabdeveloper.tvoverlayremote)
 	- Make sure that you both devices are on the same network and connect it by scanning the QR code on TvOverlay main screen, or connect mannualy by input its host and IP.
 	- (Optional) On *Notification*, you can give permission to mirror your device notifications to TvOverlay.
