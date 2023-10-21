@@ -22,6 +22,7 @@ Watch it on YouTube: https://www.youtube.com/watch?v=mdsY084-pr8
   <a href="#how-to-use">How To Use</a> •
   <a href="#premium-features">Premium Features</a> •
   <a href="#use-cases">Use cases</a> •
+  <a href="#models">Models</a> •
   <a href="#issues-suggestions--feature-requests">Issues, suggestions & feature requests</a>
 </p>
 
