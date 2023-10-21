@@ -13,6 +13,7 @@ notify:
       appIcon: "{{ data.appIcon | default('mdi:home-assistant') }}"
       color: "{{ data.color | default('#049cdb') }}"
       image: "{{ data.image | default(null) }}"
+      video: "{{ data.video | default(null) }}"
       smallIcon: "{{ data.smallIcon | default(null) }}"
       largeIcon: "{{ data.largeIcon | default(null) }}"
       corner: "{{ data.corner  | default(null) }}"
