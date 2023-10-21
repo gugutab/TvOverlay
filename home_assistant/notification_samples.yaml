@@ -4,18 +4,18 @@ alias: Rest notification test
 sequence:
   - service: notify.tvoverlaysample
     data:
+      title: Here is a Title  # optional | string | main text | default: null
+      message: This is my message to you! # REQUIRED: this is a required field for home assistant, but it can be 'null' if not needed | string | secondary text | default: null
       data:
-        id: "notification_sample" # optional id string - if a notification is being displayed and the tvoverlay receives a notification with the same id, the notification displayed is updated instantly
-        appTitle: AppTitle # optional text field
-        appIcon: mdi:unicorn  # optional - accepts mdi icons, image urls and Bitmap encoded to Base64
-        color: "#FFF000" # optional - accepts 6 or 8 digit color hex. the '#' is optional
-        smallIcon: mdi:speaker-multiple # optional - accepts mdi icons, image urls and Bitmap encoded to Base64
-        largeIcon: mdi:camera # optional - accepts mdi icons, image urls and Bitmap encoded to Base64
-        corner: bottom_end  # optional - values: bottom_start, bottom_end, top_start, top_end
+        id: "notification_sample" # optional | string | can be used to edit a notification while in queue or being displayed | default: [random]
+        appTitle: AppTitle # optional | string | extra info text | default: null
+        smallIcon: mdi:speaker-multiple # optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+        color: "#FFF000" # optional | string | color tint for smallIcon. accepts 6 or 8 digit color hex. the '#' is optional | default: null
+        largeIcon: mdi:camera # optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+        corner: bottom_end  # optional | string | position on the screen. accept values: bottom_start, bottom_end, top_start, top_end | default: null (uses hot corner)
         seconds: 7  # optional - exibition duration
-        image: "https://fastly.picsum.photos/id/778/300/300.jpg"  # optional - accepts mdi image urls
-      message: This is my message to you! # REQUIRED: this is a required field for home assistant, but it can be 'null' if not needed
-      title: Here is a Title  # optional text field
+        image: "https://fastly.picsum.photos/id/778/300/300.jpg"  # optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+
 mode: single
 
 # Use case 1: Notify on person arriving Home (AUTOMATION)
