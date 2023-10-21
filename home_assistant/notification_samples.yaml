@@ -15,7 +15,7 @@ sequence:
         corner: bottom_end  # optional | string | position on the screen. accept values: bottom_start, bottom_end, top_start, top_end | default: null (uses hot corner)
         seconds: 7  # optional | int | duration that the notification will stay visible in seconds | default: null (uses duration setting)
         image: "https://fastly.picsum.photos/id/778/300/300.jpg"  # optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
-        video: "https://fastly.picsum.photos/id/778/300/300.jpg"  # optional | string | video url. supports rtps, hls, dash, smoothstreaming | default: null
+        video: "rtsp://localhost:5555/live"  # optional | string | video url. supports rtps, hls, dash, smoothstreaming | default: null
 mode: single
 
 # Use case 1: Notify on person arriving Home (AUTOMATION)
