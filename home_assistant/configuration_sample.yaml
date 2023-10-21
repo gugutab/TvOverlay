@@ -8,16 +8,15 @@ notify:
     verify_ssl: false
     title_param_name: title
     data:
-      id: "{{ data.id | default(null) }}"
-      appTitle: "{{ data.appTitle  | default('Home Assistant') }}"
-      appIcon: "{{ data.appIcon | default('mdi:home-assistant') }}"
-      color: "{{ data.color | default('#049cdb') }}"
-      image: "{{ data.image | default(null) }}"
-      video: "{{ data.video | default(null) }}"
-      smallIcon: "{{ data.smallIcon | default(null) }}"
-      largeIcon: "{{ data.largeIcon | default(null) }}"
-      corner: "{{ data.corner  | default(null) }}"
-      seconds: "{{ data.seconds | default(null) }}"
+      id: "{{ data.id | default(null) }}" # string | main text | default: null
+      appTitle: "{{ data.appTitle  | default('Home Assistant') }}" # string | extra info text | default: null
+      color: "{{ data.color | default('#049cdb') }}" # string | color tint for smallIcon. accepts 6 or 8 digit color hex. the '#' is optional | default: null
+      image: "{{ data.image | default(null) }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+      video: "{{ data.video | default(null) }}" # string | video url. supports rtps, hls, dash, smoothstreaming | default: null
+      smallIcon: "{{ data.smallIcon | default(null) }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+      largeIcon: "{{ data.largeIcon | default(null) }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+      corner: "{{ data.corner  | default(null) }}" # string | position on the screen. accept values: bottom_start, bottom_end, top_start, top_end | default: null (uses hot corner)
+      seconds: "{{ data.seconds | default(null) }}" # int | duration that the notification will stay visible in seconds | default: null (uses duration setting)
       
   - name: TvOverlayNotifyFixed
     platform: rest
