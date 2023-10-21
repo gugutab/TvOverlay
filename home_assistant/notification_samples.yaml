@@ -13,7 +13,7 @@ sequence:
         color: "#FFF000" # optional | string | color tint for smallIcon. accepts 6 or 8 digit color hex. the '#' is optional | default: null
         largeIcon: mdi:camera # optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
         corner: bottom_end  # optional | string | position on the screen. accept values: bottom_start, bottom_end, top_start, top_end | default: null (uses hot corner)
-        seconds: 7  # optional - exibition duration
+        seconds: 7  # optional | int | duration that the notification will stay visible in seconds | default: null (uses duration setting)
         image: "https://fastly.picsum.photos/id/778/300/300.jpg"  # optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
 
 mode: single
