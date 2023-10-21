@@ -118,5 +118,38 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 | Fixed notification indicating weather | Home Assistant | <img src="https://github.com/gugutab/TvOverlay/blob/main/images/weather.jpg?raw=true" /> | [🔗](https://github.com/gugutab/TvOverlay/blob/0de278111002079452fd96c5662b4ea09f6c3729/home_assistant/fixed_notification_samples.yaml#L89-L123) |
 | Darker screen after sunset; reseting after sunrising | Home Assistant with MQTT| <img src="https://github.com/gugutab/TvOverlay/blob/main/images/background.gif?raw=true" /> | [🔗](https://github.com/gugutab/TvOverlay/blob/0de278111002079452fd96c5662b4ea09f6c3729/home_assistant/background_samples.yaml#L3-L31) |
 
+## Models
+
+### Notification
+
+| Name | Optional / Required | Description | Default Value |
+|---|---|---|---|
+| id | Optional | A unique identifier for the notification. Can be used to edit a notification while in queue or being displayed. | [random] |
+| title | Optional | The main text of the notification. | null |
+| message | Optional | The secondary text of the notification. | null |
+| appTitle | Optional | Extra info text for the notification. | null |
+| image | Optional | The image to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
+| video | Optional | The video URL to display in the notification. Supports RTSP, HLS, DASH, and SmoothStreaming. | null |
+| smallIcon | Optional | The small icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
+| color | Optional | The color tint for the smallIcon. Accepts 6 or 8 digit color hex. The '#' is optional. | null |
+| largeIcon | Optional | The large icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
+| corner | Optional | The position of the notification on the screen. Can be `bottom_start`, `bottom_end`, `top_start`, or `top_end`. | null (uses hot corner setting) |
+| seconds | Optional | The duration that the notification will stay visible in seconds. | null (uses duration setting) |
+
+### Fixed notification
+
+| Name | Optional / Required | Description | Default Value |
+|---|---|---|---|
+| id | Optional | A unique identifier for the fixed notification. Can be used to edit or remove the notification. | [random] |
+| visible | Optional | Whether the fixed notification is visible. | true |
+| icon | Optional | The icon to display in the fixed notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
+| text | Optional | The text to display in the fixed notification. | null |
+| textColor | Optional | The color of the text in the fixed notification. | #FFFFFF |
+| iconColor | Optional | The color of the icon in the fixed notification. | #FFFFFF |
+| borderColor | Optional | The color of the border around the fixed notification. | #FFFFFF |
+| backgroundColor | Optional | The background color of the fixed notification. | #66000000 |
+| shape | Optional | The shape of the fixed notification frame. Can be `circle`, `rounded`, or `rectangular`. | rounded |
+| expiration | Optional | The time when the fixed notification will be removed. Can be specified in Epoch time, duration format, or seconds. | null |
+
 ## Issues, suggestions & feature requests
 For Issues, suggestions & feature requests, [create a Issue](https://github.com/gugutab/TvOverlay/issues).
