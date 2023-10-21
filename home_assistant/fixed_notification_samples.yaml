@@ -4,17 +4,17 @@ alias: Rest fixed notification test
 sequence:
   - service: notify.tvoverlaysamplefixed
     data:
+      message: "Sample" # REQUIRED: this is a required field for home assistant, but it can be 'null' if not needed | string | main text | default: null
       data:
-        id: "fixed_notification_sample" # optional id string - if a fixed notification with this id exist, it will be updated
-        icon: mdi:unicorn  # optional - accepts mdi icons, image urls and Bitmap encoded to Base64
-        textColor: "#FFF000" # optional - accepts 6 or 8 digit color hex. the '#' is optional
-        iconColor: "#FFF000" # optional - accepts 6 or 8 digit color hex. the '#' is optional
-        borderColor: "#FFF000" # optional - accepts 6 or 8 digit color hex. the '#' is optional
-        backgroundColor: "#FFF000" # optional - accepts 6 or 8 digit color hex. the '#' is optional
-        shape: "circle" # optional - values: circle, rounded, rectangular
-        expiration: "7m"  # optional - valid formats: 1695693410 (Epoch time), 1y2w3d4h5m6s (duration format) or 123 (for seconds)
-        visible: true  # optional - if false it deletes the fixed notification with matching id
-      message: "Sample" # REQUIRED: this is a required field for home assistant, but it can be 'null' if not needed
+        id: "fixed_notification_sample" # optional | string | can be used to edit or remove the fixed notification | default: [random]
+        visible: true  # optional | boolean || if false, removes the fixed notification with matching id || default: true
+        icon: mdi:unicorn  # optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+        textColor: "#FFF000" # optional | string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
+        iconColor: "#FFF000" # optional | string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
+        borderColor: "#FFF000" # optional | string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
+        backgroundColor: "#FFF000" # optional | string | accepts 6 or 8 digit color hex. the '#' is optional | default: #66000000
+        shape: "circle" # optional | string | frame style. accept values: circle, rounded, rectangular | default: "rounded"
+        expiration: "7m"  # optional | string or int | when the notification will be removed. valid formats: 1695693410 (Epoch time), 1y2w3d4h5m6s (duration format) or 123 (for seconds) | default:  null
 mode: single
 
 # Use Case 1: Phone Battery mirror
