@@ -189,5 +189,18 @@ To change settings, POST on `{{host}}:{{ip}}/set/settings` a [settings json obje
 | displayDebug | Whether to display debug information on the overlay. | boolean | null | ✓ |
 | pixelShift | Whether to move the overlay every 2 minutes to avoid screen burn-in. | boolean | null | ✓ |
 
+### MQTT
+
+To change MQTT settings, POST on `{{host}}:{{ip}}/set/mqtt` a [MQTT settings json object](json/mqtt.json).
+| Name | Description | Type | Default Value | Optional |
+|---|---|---|---|---|
+| displayMqttStatusChange | Whether to display a message when MQTT connects or disconnects. | boolean | true | ✓ |
+| mqttConfig | The MQTT configuration. | object | null | ✓ |
+| mqttConfig.broker | The URL of the MQTT broker. | string | required | ✗ |
+| mqttConfig.port | The port of the MQTT broker. | integer | required | ✗ |
+| mqttConfig.user | The username for the MQTT broker. | string | optional | ✓ |
+| mqttConfig.password | The password for the MQTT broker. | string | optional | ✓ |
+
+
 ## Issues, suggestions & feature requests
 For Issues, suggestions & feature requests, [create a Issue](https://github.com/gugutab/TvOverlay/issues).
