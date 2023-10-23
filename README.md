@@ -146,7 +146,7 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 | icon | Optional | The icon to display in the fixed notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
 | text | Optional | The text to display in the fixed notification. | null |
 | textColor | Optional | The color of the text in the fixed notification. | #FFFFFF |
-| iconColor | Optional | The color of the icon in the fixed notification. | #FFFFFF |
+| iconColor | Optional | The color tint for the icon in the fixed notification. | null |
 | borderColor | Optional | The color of the border around the fixed notification. | #FFFFFF |
 | backgroundColor | Optional | The background color of the fixed notification. | #66000000 |
 | shape | Optional | The shape of the fixed notification frame. Can be `circle`, `rounded`, or `rectangular`. | rounded |
