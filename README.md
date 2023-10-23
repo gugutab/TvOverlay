@@ -194,12 +194,12 @@ To change settings, POST on `{{host}}:{{ip}}/set/settings` a [settings json obje
 To change MQTT settings, POST on `{{host}}:{{ip}}/set/mqtt` a [MQTT settings json object](json/mqtt.json).
 | Name | Description | Type | Default Value | Optional |
 |---|---|---|---|---|
-| displayMqttStatusChange | Whether to display a message when MQTT connects or disconnects. | boolean | true | ✓ |
+| displayMqttStatusChange | Whether to display a message when MQTT connects or disconnects. | boolean | null | ✓ |
 | mqttConfig | Set or replace MQTT config and try to connect. | object | null | ✓ |
-| mqttConfig.broker | The URL of the MQTT broker. | string | required | ✗ |
-| mqttConfig.port | The port of the MQTT broker. | integer | required | ✗ |
-| mqttConfig.user | The username for the MQTT broker. | string | optional | ✓ |
-| mqttConfig.password | The password for the MQTT broker. | string | optional | ✓ |
+| mqttConfig.broker | The URL of the MQTT broker. | string | N/A | ✗ |
+| mqttConfig.port | The port of the MQTT broker. | integer |  N/A | ✗ |
+| mqttConfig.user | The username for the MQTT broker. | string | null | ✓ |
+| mqttConfig.password | The password for the MQTT broker. | string | null | ✓ |
 
 
 ## Issues, suggestions & feature requests
