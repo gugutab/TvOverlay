@@ -195,7 +195,7 @@ To change MQTT settings, POST on `{{host}}:{{ip}}/set/mqtt` a [MQTT settings jso
 | Name | Description | Type | Default Value | Optional |
 |---|---|---|---|---|
 | displayMqttStatusChange | Whether to display a message when MQTT connects or disconnects. | boolean | true | ✓ |
-| mqttConfig | The MQTT configuration. | object | null | ✓ |
+| mqttConfig | Set or replace MQTT config and try to connect. | object | null | ✓ |
 | mqttConfig.broker | The URL of the MQTT broker. | string | required | ✗ |
 | mqttConfig.port | The port of the MQTT broker. | integer | required | ✗ |
 | mqttConfig.user | The username for the MQTT broker. | string | optional | ✓ |
