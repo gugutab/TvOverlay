@@ -122,6 +122,7 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 ## Rest API
 
 ### Notification
+To send a notification, POST on `{{host}}:{{ip}}/notify` a [notification json object](json/notification.json).
 
 | Name | Optional / Required | Description | Default Value |
 |---|---|---|---|
@@ -131,13 +132,14 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 | appTitle | Optional | Extra info text for the notification. | null |
 | image | Optional | The image to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
 | video  | Optional | The video URL to display in the notification. Supports RTSP, HLS, DASH, and SmoothStreaming. (since 1.0.2)| null |
+| largeIcon | Optional | The large icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
 | smallIcon | Optional | The small icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
 | color | Optional | The color tint for the smallIcon. Accepts 6 or 8 digit color hex. The '#' is optional. | null |
-| largeIcon | Optional | The large icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
 | corner | Optional | The position of the notification on the screen. Can be `bottom_start`, `bottom_end`, `top_start`, or `top_end`. | null (uses hot corner setting) |
 | seconds | Optional | The duration that the notification will stay visible in seconds. | null (uses duration setting) |
 
 ### Fixed notification
+To add a fixed notification, POST on `{{host}}:{{ip}}/notify_fixed` a [fixed notification json object](json/fixed_notification.json).
 
 | Name | Optional / Required | Description | Default Value |
 |---|---|---|---|
@@ -151,8 +153,6 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 | backgroundColor | Optional | The background color of the fixed notification. | #66000000 |
 | shape | Optional | The shape of the fixed notification frame. Can be `circle`, `rounded`, or `rectangular`. | rounded |
 | expiration | Optional | The time when the fixed notification will be removed. Can be specified in Epoch time, duration format, or seconds. | null |
-
-### Fixed notification
 
 ## Issues, suggestions & feature requests
 For Issues, suggestions & feature requests, [create a Issue](https://github.com/gugutab/TvOverlay/issues).
