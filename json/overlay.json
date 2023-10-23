@@ -1,0 +1,5 @@
+{
+    "clockOverlayVisibility": 20, // optional | int (0~95) | how visible the clock is 
+    "hotCorner": "top_start", // optional | string | position on the screen. accept values: bottom_start, bottom_end, top_start, top_end
+    "overlayVisibility": 20 // optional | int (0~95) | how visible the overlay background is
+}
