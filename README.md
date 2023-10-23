@@ -22,7 +22,7 @@ Watch it on YouTube: https://www.youtube.com/watch?v=mdsY084-pr8
   <a href="#how-to-use">How To Use</a> •
   <a href="#premium-features">Premium Features</a> •
   <a href="#use-cases">Use cases</a> •
-  <a href="#models">Models</a> •
+  <a href="#rest-api">Rest API</a> •
   <a href="#issues-suggestions--feature-requests">Issues, suggestions & feature requests</a>
 </p>
 
@@ -119,7 +119,7 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 | Fixed notification indicating weather | Home Assistant | <img src="https://github.com/gugutab/TvOverlay/blob/main/images/weather.jpg?raw=true" /> | [🔗](https://github.com/gugutab/TvOverlay/blob/0de278111002079452fd96c5662b4ea09f6c3729/home_assistant/fixed_notification_samples.yaml#L89-L123) |
 | Darker screen after sunset; reseting after sunrising | Home Assistant with MQTT| <img src="https://github.com/gugutab/TvOverlay/blob/main/images/background.gif?raw=true" /> | [🔗](https://github.com/gugutab/TvOverlay/blob/0de278111002079452fd96c5662b4ea09f6c3729/home_assistant/background_samples.yaml#L3-L31) |
 
-## Models
+## Rest API
 
 ### Notification
 
@@ -151,6 +151,8 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 | backgroundColor | Optional | The background color of the fixed notification. | #66000000 |
 | shape | Optional | The shape of the fixed notification frame. Can be `circle`, `rounded`, or `rectangular`. | rounded |
 | expiration | Optional | The time when the fixed notification will be removed. Can be specified in Epoch time, duration format, or seconds. | null |
+
+### Fixed notification
 
 ## Issues, suggestions & feature requests
 For Issues, suggestions & feature requests, [create a Issue](https://github.com/gugutab/TvOverlay/issues).
