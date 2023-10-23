@@ -1,0 +1,13 @@
+// fixed notification json object
+{
+    "id": "fixed_notification_sample", // optional | string | can be used to edit or remove the fixed notification | default: [random]
+    "visible": true, // optional | boolean || if false, removes the fixed notification with matching id || default: true
+    "icon": "https://picsum.photos/300/300", // optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+    "message": "Test", // optional | string | accepts 6 or 8 digit color hex. the '#' is optional | default: null
+    "messageColor": "#FFFFFF", // optional | string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
+    "iconColor": "#FFFFFF", // optional | string | accepts 6 or 8 digit color hex. the '#' is optional | default: null
+    "borderColor": "#FFFFFF", // optional | string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
+    "backgroundColor": "#66000000", // optional | string | accepts 6 or 8 digit color hex. the '#' is optional | default: #66000000
+    "shape": "rounded", // optional | string | frame style. accept values: circle, rounded, rectangular | default: "rounded"
+    "expiration": 10 // optional | string or int | when the notification will be removed. valid formats: 1695693410 (Epoch time), 1y2w3d4h5m6s (duration format) or 123 (for seconds) | default:  null
+}
