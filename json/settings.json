@@ -1,0 +1,6 @@
+{
+    "deviceName": "Shield TV", // optional | string | changes the name of the TV device
+    "remotePort": 5001, // optional | string | changes the port of the TV device
+    "displayDebug": false, // optional | boolean | if true, display an text on the overlay with info for debug purpose
+    "pixelShift": false // optional | boolean | if true, moves the overlay every 2m to avoid screen burn-in (since 1.0.2)
+}
