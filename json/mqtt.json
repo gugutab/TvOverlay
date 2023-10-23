@@ -1,0 +1,9 @@
+{
+    "displayMqttStatusChange": true, // optional | boolean | if true, displays a message when MQTT connects or disconnects
+    "mqttConfig": { // optional | object | set or replace MQTT config and try to connect
+        "broker": "192.168.0.101", // required | string | MQTT broker url
+        "port": 1883, // required | int | MQTT broker port
+        "user": "mqtt", // optional | string | MQTT user
+        "password": "mqtt" // optional | string | MQTT password
+    }
+}
