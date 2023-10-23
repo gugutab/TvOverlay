@@ -154,5 +154,14 @@ To add a fixed notification, POST on `{{host}}:{{ip}}/notify_fixed` a [fixed not
 | shape | Optional | The shape of the fixed notification frame. Can be `circle`, `rounded`, or `rectangular`. | rounded |
 | expiration | Optional | The time when the fixed notification will be removed. Can be specified in Epoch time, duration format, or seconds. | null |
 
+### Overlay
+To modify the overlay, POST on `{{host}}:{{ip}}/set/overlay` an [overlay json object](json/overlay.json).
+
+| Name | Optional / Required | Description | Default Value |
+|---|---|---|---|
+| clockOverlayVisibility | Optional | How visible the clock is | null |
+| overlayVisibility | Optional | How visible the overlay background is | null |
+| hotCorner | Optional | position on the screen. accept values: `bottom_start`, `bottom_end`, `top_start`, `top_end` | null |
+
 ## Issues, suggestions & feature requests
 For Issues, suggestions & feature requests, [create a Issue](https://github.com/gugutab/TvOverlay/issues).
