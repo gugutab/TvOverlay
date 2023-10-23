@@ -130,7 +130,7 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 | message | Optional | The secondary text of the notification. | null |
 | appTitle | Optional | Extra info text for the notification. | null |
 | image | Optional | The image to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
-| video | Optional | The video URL to display in the notification. Supports RTSP, HLS, DASH, and SmoothStreaming. | null |
+| video  | Optional | The video URL to display in the notification. Supports RTSP, HLS, DASH, and SmoothStreaming. (since 1.0.2)| null |
 | smallIcon | Optional | The small icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
 | color | Optional | The color tint for the smallIcon. Accepts 6 or 8 digit color hex. The '#' is optional. | null |
 | largeIcon | Optional | The large icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
