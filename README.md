@@ -122,46 +122,72 @@ On TvOverlay Remote, users can have access to Premium features by purchasing a o
 ## Rest API
 
 ### Notification
+
 To send a notification, POST on `{{host}}:{{ip}}/notify` a [notification json object](json/notification.json).
 
-| Name | Optional / Required | Description | Default Value |
-|---|---|---|---|
-| id | Optional | A unique identifier for the notification. Can be used to edit a notification while in queue or being displayed. | [random] |
-| title | Optional | The main text of the notification. | null |
-| message | Optional | The secondary text of the notification. | null |
-| appTitle | Optional | Extra info text for the notification. | null |
-| image | Optional | The image to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
-| video  | Optional | The video URL to display in the notification. Supports RTSP, HLS, DASH, and SmoothStreaming. (since 1.0.2)| null |
-| largeIcon | Optional | The large icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
-| smallIcon | Optional | The small icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
-| color | Optional | The color tint for the smallIcon. Accepts 6 or 8 digit color hex. The '#' is optional. | null |
-| corner | Optional | The position of the notification on the screen. Can be `bottom_start`, `bottom_end`, `top_start`, or `top_end`. | null (uses hot corner setting) |
-| seconds | Optional | The duration that the notification will stay visible in seconds. | null (uses duration setting) |
+| Name | Description | Type | Default Value | Optional |
+|---|---|---|---|---|
+| id | A unique identifier for the notification. Can be used to edit a notification while in queue or being displayed. | string | [random] | ✓ |
+| title | The main text of the notification. | string | null | ✓ |
+| message | The secondary text of the notification. | string | null | ✓ |
+| appTitle | Extra info text for the notification. | string | null | ✓ |
+| image | The image to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | string | null | ✓ |
+| video | The video URL to display in the notification. Supports RTSP, HLS, DASH, and SmoothStreaming. (since 1.0.2)| string | null | ✓ |
+| largeIcon | The large icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | string | null | ✓ |
+| smallIcon | The small icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | string | null | ✓ |
+| color | The color tint for the smallIcon. Accepts 6 or 8 digit color hex. The '#' is optional. | string | null | ✓ |
+| corner | The position of the notification on the screen. Can be `bottom_start`, `bottom_end`, `top_start`, or `top_end`. | string | null (uses hot corner setting) | ✓ |
+| seconds | The duration that the notification will stay visible in seconds. | integer | null (uses duration setting) | ✓ |
 
 ### Fixed notification
+
 To add a fixed notification, POST on `{{host}}:{{ip}}/notify_fixed` a [fixed notification json object](json/fixed_notification.json).
 
-| Name | Optional / Required | Description | Default Value |
-|---|---|---|---|
-| id | Optional | A unique identifier for the fixed notification. Can be used to edit or remove the notification. | [random] |
-| visible | Optional | Whether the fixed notification is visible. | true |
-| icon | Optional | The icon to display in the fixed notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | null |
-| text | Optional | The text to display in the fixed notification. | null |
-| textColor | Optional | The color of the text in the fixed notification. | #FFFFFF |
-| iconColor | Optional | The color tint for the icon in the fixed notification. | null |
-| borderColor | Optional | The color of the border around the fixed notification. | #FFFFFF |
-| backgroundColor | Optional | The background color of the fixed notification. | #66000000 |
-| shape | Optional | The shape of the fixed notification frame. Can be `circle`, `rounded`, or `rectangular`. | rounded |
-| expiration | Optional | The time when the fixed notification will be removed. Can be specified in Epoch time, duration format, or seconds. | null |
+| Name | Description | Type | Default Value | Optional |
+|---|---|---|---|---|
+| id | A unique identifier for the fixed notification. Can be used to edit or remove the notification. | string | [random] | ✓ |
+| visible | Whether the fixed notification is visible. | boolean | true | ✓ |
+| icon | The icon to display in the fixed notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | string | null | ✓ |
+| text | The text to display in the fixed notification. | string | null | ✓ |
+| textColor | The color of the text in the fixed notification. | string | #FFFFFF | ✓ |
+| iconColor | The color tint for the icon in the fixed notification. | string | null | ✓ |
+| borderColor | The color of the border around the fixed notification. | string | #FFFFFF | ✓ |
+| backgroundColor | The background color of the fixed notification. | string | #66000000 | ✓ |
+| shape | The shape of the fixed notification frame. Can be `circle`, `rounded`, or `rectangular`. | string | rounded | ✓ |
+| expiration | The time when the fixed notification will be removed. Valid formats: `1695693410` (Epoch time), `1y2w3d4h5m6s` (duration format) or `123` (for seconds) | string or integer | null | ✓ |
 
 ### Overlay
+
 To modify the overlay, POST on `{{host}}:{{ip}}/set/overlay` an [overlay json object](json/overlay.json).
 
-| Name | Optional / Required | Description | Default Value |
-|---|---|---|---|
-| clockOverlayVisibility | Optional | How visible the clock is | null |
-| overlayVisibility | Optional | How visible the overlay background is | null |
-| hotCorner | Optional | position on the screen. accept values: `bottom_start`, `bottom_end`, `top_start`, `top_end` | null |
+| Name | Description | Type | Default Value | Optional |
+|---|---|---|---|---|
+| clockOverlayVisibility | How visible the clock is | integer (0~95) | null | ✓ |
+| overlayVisibility | How visible the overlay background is | integer (0~95) | null | ✓ |
+| hotCorner | position on the screen. accept values: `bottom_start`, `bottom_end`, `top_start`, `top_end` | string | null | ✓ |
+
+### Notification settings
+
+To change notifications settings, POST on `{{host}}:{{ip}}/set/notifications` a [notification settings json object](json/notification_settings.json).
+
+| Name | Description | Type | Default Value | Optional |
+|---|---|---|---|---|
+| displayNotifications | Whether notifications are displayed. | boolean | null | ✓ |
+| displayFixedNotifications | Whether fixed notifications are displayed. | boolean | null | ✓ |
+| notificationLayoutName | The name of the notification layout to use. | string | null | ✓ |
+| notificationDuration | The duration in seconds that notifications are displayed. | integer | null | ✓ |
+| fixedNotificationsVisibility | The visibility of fixed notifications, from 0 to 95. A value of -1 makes fixed notifications have the same visibility as the clock. | integer (-1~95) | null | ✓ |
+
+### Settings
+
+To change settings, POST on `{{host}}:{{ip}}/set/settings` a [settings json object](json/settings.json).
+
+| Name | Description | Type | Default Value | Optional |
+|---|---|---|---|---|
+| deviceName | The name of the TV device. | string | null | ✓ |
+| remotePort | The port of the TV device. | string | null | ✓ |
+| displayDebug | Whether to display debug information on the overlay. | boolean | null | ✓ |
+| pixelShift | Whether to move the overlay every 2 minutes to avoid screen burn-in. | boolean | null | ✓ |
 
 ## Issues, suggestions & feature requests
 For Issues, suggestions & feature requests, [create a Issue](https://github.com/gugutab/TvOverlay/issues).
