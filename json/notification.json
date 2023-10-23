@@ -1,0 +1,14 @@
+// notification json objec
+{
+    "id": 0, // optional | string | can be used to edit a notification while in queue or being displayed | default: [random]
+    "title": "Title", // optional | string | main text | default: null
+    "message": "Message", // optional | string | secondary text | default: null
+    "source": "AppTitle", // optional | string | extra info text | default: null
+    "image": "https://picsum.photos/200/100", // optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+    "video": "rtsp://localhost:5555/live", // optional | string | video url. supports rtps, hls, dash, smoothstreaming | default: null
+    "largeIcon": "mdi:camera", // optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+    "smallIcon": "mdi:speaker-multiple", // optional | string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+    "smallIconColor": "#FF0000", // optional | string | color tint for smallIcon. accepts 6 or 8 digit color hex. the '#' is optional | default: null
+    "corner": "bottom_end", // optional | string | position on the screen. accept values: bottom_start, bottom_end, top_start, top_end | default: null (uses hot corner)
+    "duration": 20 // optional | int | duration that the notification will stay visible in seconds | default: null (uses duration setting)
+}
