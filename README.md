@@ -130,14 +130,14 @@ To send a notification, POST on `{{host}}:{{ip}}/notify` a [notification json ob
 | id | A unique identifier for the notification. Can be used to edit a notification while in queue or being displayed. | string | [random] | ✓ |
 | title | The main text of the notification. | string | null | ✓ |
 | message | The secondary text of the notification. | string | null | ✓ |
-| appTitle | Extra info text for the notification. | string | null | ✓ |
+| source | Extra info text for the notification. | string | null | ✓ |
 | image | The image to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | string | null | ✓ |
 | video | The video URL to display in the notification. Supports RTSP, HLS, DASH, and SmoothStreaming. (since 1.0.2)| string | null | ✓ |
 | largeIcon | The large icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | string | null | ✓ |
 | smallIcon | The small icon to display in the notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | string | null | ✓ |
-| color | The color tint for the smallIcon. Accepts 6 or 8 digit color hex. The '#' is optional. | string | null | ✓ |
+| smallIconColor | The color tint for the smallIcon. Accepts 6 or 8 digit color hex. The '#' is optional. | string | null | ✓ |
 | corner | The position of the notification on the screen. Can be `bottom_start`, `bottom_end`, `top_start`, or `top_end`. | string | null (uses hot corner setting) | ✓ |
-| seconds | The duration that the notification will stay visible in seconds. | integer | null (uses duration setting) | ✓ |
+| duration | The duration that the notification will stay visible in seconds. | integer | null (uses duration setting) | ✓ |
 
 ### Fixed notification
 
@@ -148,8 +148,8 @@ To add a fixed notification, POST on `{{host}}:{{ip}}/notify_fixed` a [fixed not
 | id | A unique identifier for the fixed notification. Can be used to edit or remove the notification. | string | [random] | ✓ |
 | visible | Whether the fixed notification is visible. | boolean | true | ✓ |
 | icon | The icon to display in the fixed notification. Can be an MDI icon, image URL, or Bitmap encoded to Base64. | string | null | ✓ |
-| text | The text to display in the fixed notification. | string | null | ✓ |
-| textColor | The color of the text in the fixed notification. | string | #FFFFFF | ✓ |
+| message | The text to display in the fixed notification. | string | null | ✓ |
+| messageColor | The color of the text in the fixed notification. | string | #FFFFFF | ✓ |
 | iconColor | The color tint for the icon in the fixed notification. | string | null | ✓ |
 | borderColor | The color of the border around the fixed notification. | string | #FFFFFF | ✓ |
 | backgroundColor | The background color of the fixed notification. | string | #66000000 | ✓ |
