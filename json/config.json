@@ -1,0 +1,29 @@
+{
+    "overlay": {
+        "clockOverlayVisibility": 20, // optional | int (0~95) | how visible the clock is 
+        "hotCorner": "top_start", // optional | string | position on the screen. accept values: bottom_start, bottom_end, top_start, top_end
+        "overlayVisibility": 20 // optional | int (0~95) | how visible the overlay background is
+    },
+    "notifications": {
+        "displayNotifications": true, // optional | boolean | if false, notifications are NOT displayed 
+        "displayFixedNotifications": true, // optional | boolean | if false, fixed notifications are NOT displayed 
+        "notificationLayoutName": "Default", // optional | string | sets notification layout to one with the this name 
+        "notificationDuration": 5, // optional | int | how long, in seconds, notifications stays visible
+        "fixedNotificationsVisibility": -1 // optional | int (-1~95) | how visible the fixed notifications are. -1 makes it use the same visibility as the clock 
+    },
+    "mqtt": {
+        "displayMqttStatusChange": true, // optional | boolean | if true, displays a message when MQTT connects or disconnects
+        "mqttConfig": { // optional | object | set or replace MQTT config and try to connect
+            "broker": "192.168.0.101", // required | string | MQTT broker url
+            "port": 1883, // required | int | MQTT broker port
+            "user": "mqtt", // optional | string | MQTT user
+            "password": "mqtt" // optional | string | MQTT password
+        }
+    },
+    "settings": {
+        "deviceName": "Shield TV", // optional | string | changes the name of the TV device
+        "remotePort": 5001, // optional | string | changes the port of the TV device
+        "displayDebug": false, // optional | boolean | if true, display an text on the overlay with info for debug purpose
+        "pixelShift": false // optional | boolean | if true, moves the overlay every 2m to avoid screen burn-in (since 1.0.2)
+    }
+}
