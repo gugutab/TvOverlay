@@ -30,7 +30,7 @@ trigger:
     from: not_home
 condition: []
 action:
-  - service: notify.tvoverlaysuite
+  - service: notify.tvoverlaysample
     data:
       data:
         smallIcon: mdi:home
@@ -51,7 +51,7 @@ trigger:
     domain: binary_sensor
 condition: []
 action:
-  - service: notify.tvoverlaysuite
+  - service: notify.tvoverlaysample
     data:
       message: Motion detect at Front door!
       data:
