@@ -8,15 +8,15 @@ notify:
     verify_ssl: false
     title_param_name: title
     data:
-      id: "{{ data.id | default(null) }}" # string | main text | default: null
+      id: "{{ data.id | default('null') }}" # string | main text | default: null
       appTitle: "{{ data.appTitle  | default('Home Assistant') }}" # string | extra info text | default: null
       color: "{{ data.color | default('#049cdb') }}" # string | color tint for smallIcon. accepts 6 or 8 digit color hex. the '#' is optional | default: null
-      image: "{{ data.image | default(null) }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
-      video: "{{ data.video | default(null) }}" # string | video url. supports rtps, hls, dash, smoothstreaming | default: null
-      smallIcon: "{{ data.smallIcon | default(null) }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
-      largeIcon: "{{ data.largeIcon | default(null) }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
-      corner: "{{ data.corner  | default(null) }}" # string | position on the screen. accept values: bottom_start, bottom_end, top_start, top_end | default: null (uses hot corner)
-      seconds: "{{ data.seconds | default(null) }}" # int | duration that the notification will stay visible in seconds | default: null (uses duration setting)
+      image: "{{ data.image | default('null') }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+      video: "{{ data.video | default('null') }}" # string | video url. supports rtps, hls, dash, smoothstreaming | default: null
+      smallIcon: "{{ data.smallIcon | default('null') }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+      largeIcon: "{{ data.largeIcon | default('null') }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+      corner: "{{ data.corner  | default('null') }}" # string | position on the screen. accept values: bottom_start, bottom_end, top_start, top_end | default: null (uses hot corner)
+      seconds: "{{ data.seconds | default('null') }}" # int | duration that the notification will stay visible in seconds | default: null (uses duration setting)
       
   - name: TvOverlayNotifyFixed
     platform: rest
@@ -25,16 +25,16 @@ notify:
     verify_ssl: false
     title_param_name: title
     data:
-      id: "{{ data.id | default(null) }}" # string | can be used to edit or remove the fixed notification | default: [random]
-      text: "{{ data.text  | default(null) }}" # string | main text | default: null
-      icon: "{{ data.icon | default(null) }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
-      textColor: "{{ data.textColor | default(null) }}" # string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
-      iconColor: "{{ data.iconColor | default(null) }}" # string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
-      borderColor: "{{ data.borderColor | default(null) }}" # string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
-      backgroundColor: "{{ data.backgroundColor | default(null) }}" # string | accepts 6 or 8 digit color hex. the '#' is optional | default: #66000000
-      shape: "{{ data.shape | default(null) }}" # string | frame style. accept values: circle, rounded, rectangular | default: "rounded"
+      id: "{{ data.id | default('null') }}" # string | can be used to edit or remove the fixed notification | default: [random]
+      text: "{{ data.text  | default('null') }}" # string | main text | default: null
+      icon: "{{ data.icon | default('null') }}" # string | accepts mdi icons, image urls and Bitmap encoded to Base64 | default: null
+      textColor: "{{ data.textColor | default('null') }}" # string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
+      iconColor: "{{ data.iconColor | default('null') }}" # string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
+      borderColor: "{{ data.borderColor | default('null') }}" # string | accepts 6 or 8 digit color hex. the '#' is optional | default: #FFFFFF
+      backgroundColor: "{{ data.backgroundColor | default('null') }}" # string | accepts 6 or 8 digit color hex. the '#' is optional | default: #66000000
+      shape: "{{ data.shape | default('null') }}" # string | frame style. accept values: circle, rounded, rectangular | default: "rounded"
       visible: "{{ data.visible | default(true) }}" # boolean || if false, removes the fixed notification with matching id || default: true
-      expiration: "{{ data.expiration | default(null) }}" # string or int | when the notification will be removed. valid formats: 1695693410 (Epoch time), 1y2w3d4h5m6s (duration format) or 123 (for seconds) | default:  null
+      expiration: "{{ data.expiration | default('null') }}" # string or int | when the notification will be removed. valid formats: 1695693410 (Epoch time), 1y2w3d4h5m6s (duration format) or 123 (for seconds) | default:  null
 
       
 rest_command:
